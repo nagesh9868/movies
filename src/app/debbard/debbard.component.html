@@ -1,0 +1,31 @@
+<app-header></app-header>
+<div class="container1">
+    <div class="sidebar-common">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="outlet">
+        <div class="container">
+            <h3>Add Debbard Candidate</h3>
+            <form [formGroup]="debbardCanInfo" (ngSubmit)="registrationForm()">
+                <div class="reg-details">
+                    <label>Registration No.</label>
+                    <input type="name" formControlName="registrationno" placeholder="Enter Registration No.">
+                    <h5 style="color: red; margin: 0;"
+                        *ngIf="registrationno && registrationno.invalid && registrationno.touched">Please enter a valid
+                        Registration ID minimum 24 digits</h5>
+                </div>
+                <div class="btn">
+                    <button [disabled]="debbardCanInfo.invalid">Search</button>
+                </div>
+            </form>
+            <h5 style="font-size: large; color: black; text-decoration: none;">OR</h5>
+            <div class="file-upload">
+                <h3>Upload debbard Candidate file</h3>
+                <div class="file-input">
+                    <input class="file-upload-input" type="file" name="avatar" (change)="submitData($event)">
+                    <h4>Drag the file here</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,45 @@
+.sidebar{
+    display: flex;
+    flex-direction: column;
+}
+
+.debbard{
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    /* border: 1px solid red; */
+    margin-top: 1rem;
+}
+
+.vacancy{
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    /* border: 1px solid red; */
+    margin-top: 1rem;
+}
+
+.dossier{
+    display: flex;
+    flex-direction: column;
+    height: 5rem;
+    /* border: 1px solid red; */
+    margin-top: 1rem;
+}
+
+span{
+    display: flex;
+    margin: auto;
+    height: 2rem;
+    width: 3rem;
+    border-radius: .5rem;
+    background-color: white;
+}
+
+p{
+    margin: auto;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;  
+    color: white;
+    font-size: small;
+}

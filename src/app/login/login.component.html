@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="heading">
+        <h1>Pleae Login Here</h1>
+    </div>
+    <form [formGroup]="loginForm" (ngSubmit)="loginFormData()">
+        <input type="email" placeholder="Enter your Email" formControlName="email" >
+        <h5 style="color: red; margin: 0;" *ngIf="email && email.invalid && email.touched">Please enter the correct Mail ID</h5>
+        <input type="password" placeholder="Enter your Password" formControlName="password">
+        <h5 style="color: red; margin: 0;" *ngIf="password && password.invalid && password.touched">Must enter the valid Password</h5>
+        <button [disabled]="loginForm.invalid">Login</button>
+        <h5 routerLink="/user/register">Do not have account? Click here to Register</h5>
+    </form>
+</div>

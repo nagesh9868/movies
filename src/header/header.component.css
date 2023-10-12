@@ -1,0 +1,102 @@
+header{
+    display: flex;
+    /* border: 1px solid red; */
+}
+
+.container{
+    margin: auto;
+    display: flex;
+    width: 100%;
+    /* border: 1px solid green; */
+}
+
+.logo{
+    cursor: pointer;
+    width: 33.3%;
+    display: flex;
+    justify-content: right;
+}
+
+.logo .img{
+    width: 45%;
+    display: flex;
+    justify-content: right;
+}
+
+.logo .logo-name{
+    width: 55%;
+    margin: auto;
+}
+
+.logo .img1{
+    margin-top: 7px;
+    height: 3.2rem;
+    margin-right: 1rem;
+}
+
+.logo .img2{
+    height: 4.2rem;
+    margin-right: 1rem;
+}
+
+.india{
+    color: gray;
+}
+
+.search{
+    width: 46.7%;
+    display: flex;
+    justify-content: right;
+    margin: auto;
+}
+
+.search input{
+    margin-right: 1rem;
+    width: 50%;
+    height: 3rem;
+    border: .1px solid lightgray;
+    border-radius: 5rem;
+    outline: none;
+    padding-left: 1rem;
+    font-size: large;
+}
+
+.logged-on{
+    display: flex;
+    width: 20%;
+}
+
+.name-designation{
+    width: 100%;
+    margin: auto;
+}
+
+.designation{
+    font-size: small;
+    color: gray;
+}
+
+.logged-on .logged-image{
+    width: 60%;
+    margin: auto;
+}
+
+.logged-on .logged-image img{
+    height: 1rem;
+}
+
+button{
+    padding: 1.5rem;
+    margin: auto;
+    background-color:rgb(164, 60, 67);
+    border: none;
+    outline: none;
+    color: white;
+    font-size: medium;
+    margin-right: 0;
+}
+
+.login-icon{
+    height: 2rem;
+    margin: auto;
+}

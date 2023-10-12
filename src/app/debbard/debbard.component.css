@@ -1,0 +1,95 @@
+.container1 {
+    display: flex;
+}
+
+.sidebar-common {
+    display: flex;
+    width: 8%;
+}
+
+.outlet {
+    width: 92%;
+    background-color: rgb(248, 234, 230);
+}
+
+app-sidebar {
+    border: 1px solid green;
+    background-color: rgb(164, 60, 67);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 3rem;
+    border: .5px solid lightgray;
+    border-radius: 1.5rem;
+    margin: 1.8rem 7rem 1.8rem 7rem;
+}
+
+.container h3 {
+    border-bottom: 1.6px solid lightgray;
+    padding: 0 0 1rem 0;
+}
+
+.reg-details {
+    display: flex;
+    flex-direction: column;
+}
+
+.reg-details label {
+    margin: 1rem 0 .7rem 0;
+}
+
+.reg-details input {
+    padding: .7rem;
+    border: 1.4px solid lightgray;
+    outline: none;
+}
+
+.btn {
+    display: flex;
+    justify-content: right;
+}
+
+form button {
+    padding: .8rem 2.5rem .8rem 2.5rem;
+    background-color: rgb(164, 60, 67);
+    border: none;
+    outline: none;
+    border-radius: 10rem;
+    margin: .8rem 0 1rem 0;
+    color: white;
+    font-size: medium;
+}
+
+form button:disabled {
+    background-color: gray;
+}
+
+.file-upload {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.file-upload .file-input{
+    border: 1px solid lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    content: "Click to upload file";
+    border-radius: 1rem;
+    flex-direction: column;
+}
+.file-upload input{
+    opacity: 0;
+    width: 15rem;
+    margin-right: 20px;
+    border: none;
+    background: #084cdf;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+}

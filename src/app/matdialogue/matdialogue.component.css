@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+button{
+    color: white;   
+}
+
+.register{
+    background-color: lightgreen;
+}

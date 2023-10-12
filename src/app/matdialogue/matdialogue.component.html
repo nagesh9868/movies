@@ -1,0 +1,70 @@
+<div class="container1" *ngIf="loginError === 'You are Not Authorized user, please register first'" >
+    <h3 style="text-align: center; font-weight: bolder; font-size: larger;">{{loginError}}</h3>
+    <button matDialogClose routerLink="/user/register" class="register" mat-raised-button>
+        <span>Register</span>
+    </button>
+    <button matDialogClose (click)="msgBlank()" routerLink="/user/login" class="close" mat-raised-button style="float: right; margin: 5px; background-color:rgb(164, 60, 67);;">
+        <span>Close</span>
+    </button>
+</div>
+
+<div class="container1" *ngIf="loginError === 'The Email ID is already exist! Please register with different mail ID'" >
+    <h3 style="text-align: center; font-weight: bolder; font-size: larger;">{{loginError}}</h3>
+    <button matDialogClose routerLink="/user/login" class="register" mat-raised-button>
+        <span>Login</span>
+    </button>
+    <button matDialogClose (click)="msgBlank()" routerLink="/user/login" class="close" mat-raised-button style="float: right; margin: 5px; background-color:rgb(164, 60, 67);;">
+        <span>Close</span>
+    </button>
+</div>
+
+<div class="container1" *ngIf="candideteDetailsError === 'This Registration ID is not valid! Please enter the correct Registration ID'">
+    <h3 style="text-align: center; font-weight: bolder; font-size: larger;">{{candideteDetailsError}}</h3>
+    <!-- <button matDialogClose routerLink="/user/register" class="register" mat-raised-button>
+        <span>Register</span>
+    </button> -->
+    <div style="display: flex;">
+        <button matDialogClose (click)="msgBlank()" class="close" mat-raised-button style="margin:auto; background-color:rgb(164, 60, 67);">Close</button>
+    </div>
+</div>
+
+
+<div class="container1" *ngIf="fileUploadMsg === 'Files uploaded successfully!! please click on update button before leaving'" >
+    <h3 style="text-align: center; font-weight: bolder; font-size: larger;">{{fileUploadMsg}}</h3>
+    <!-- <button matDialogClose routerLink="/user/login" class="register" mat-raised-button>
+        <span>Add Debbard Candidate</span>
+    </button> -->
+    <div style="display: flex;">
+        <button matDialogClose (click)="msgBlank()" (blur)="msgBlank()" class="close" mat-raised-button style="margin:auto; background-color:rgb(164, 60, 67);">Close</button>
+    </div>
+</div>
+
+<div class="container1" *ngIf="updateMsg === 'The form has been updated successfully'" >
+    <h3 style="text-align: center; font-weight: bolder; font-size: larger;">{{updateMsg}}</h3>
+    <!-- <button matDialogClose routerLink="/user/login" class="register" mat-raised-button>
+        <span>Add Debbard Candidate</span>
+    </button> -->
+    <div style="display: flex;">
+        <button matDialogClose class="close" (click)="msgBlank()" (blur)="msgBlank()" mat-raised-button style="margin:auto; background-color:rgb(164, 60, 67);">Close</button>
+    </div>
+</div>
+
+<div class="container1" *ngIf="updateMsg === 'The Candidate Name is already exist'" >
+    <h3 style="text-align: center; font-weight: bolder; font-size: larger;">{{updateMsg}}</h3>
+    <!-- <button matDialogClose routerLink="/user/login" class="register" mat-raised-button>
+        <span>Add Debbard Candidate</span>
+    </button> -->
+    <div style="display: flex;">
+        <button matDialogClose class="close" (click)="msgBlank()" (blur)="msgBlank()" mat-raised-button style="margin:auto; background-color:rgb(164, 60, 67);">Close</button>
+    </div>
+</div>
+
+<div class="container1" *ngIf="updateMsg === 'Debbard Candidate details has been Saved'" >
+    <h3 style="text-align: center; font-weight: bolder; font-size: larger;">{{updateMsg}}</h3>
+    <!-- <button matDialogClose routerLink="/user/login" class="register" mat-raised-button>
+        <span>Add Debbard Candidate</span>
+    </button> -->
+    <div style="display: flex;">
+        <button matDialogClose class="close" (click)="msgBlank()" (blur)="msgBlank()" mat-raised-button style="margin:auto; background-color:rgb(164, 60, 67);">Close</button>
+    </div>
+</div>

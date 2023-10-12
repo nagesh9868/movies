@@ -6,6 +6,24 @@ export const environment = {
   production: false
 };
 
+export const baseUrl = "http://localhost:3000/"
+
+export interface debbard{
+  name:string,
+  father:string,
+  mother:string,
+  dob:string,
+  gender:string,
+  category:string,
+  educationboard:string,
+  rollnumber:string,
+  examname:string,
+  examyear:string,
+  examrollno:string,
+  debbardfrom:string,
+  debbardupto:string,
+}
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.

@@ -1,0 +1,25 @@
+<header>
+    <div class="container">
+        <div class="logo" routerLink="/ssc/home">
+            <div class="img">
+                <img class="img1" src="assets/Bharat.jpg" alt="some">
+                <img class="img2" src="assets/logo.jpg" alt="">
+            </div>
+            <div class="logo-name">
+                <div class="india">Goverment of India</div>
+                <div>Staff Selection Commission</div>
+            </div>
+        </div>
+        <div class="search">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="logged-on">
+            <div class="name-designation">
+                <div class="name">{{name|titlecase}}</div>
+                <div class="designation">Manager</div>
+            </div>
+            <img class="login-icon" src="assets/logged-on.png" alt="">
+            <button (click)="logout()">Logout</button>
+        </div>
+    </div>
+</header>

@@ -1,0 +1,135 @@
+<app-header></app-header>
+<div class="container1">
+    <div class="sidebar-common">
+        <app-sidebar></app-sidebar>
+    </div>
+    <div class="outlet">
+        <div class="container">
+            <h3>Personal Details</h3>
+            <form [formGroup]="debbardCandidate"
+                (ngSubmit)="debbardCandidateObj?.name === ''? candidateSave():updateDetails()">
+                <div class="personal-details">
+                    <div class="photo-details">
+                        <div class="details">
+                            <label>1. Name</label>
+                            <input type="name" formControlName="name" [value]="debbardCandidateObj?.name"
+                                placeholder="Something">
+                            <h5 style="color: red; margin: 0;" *ngIf="name && name.invalid && name.touched">This field
+                                must
+                                required</h5>
+                            <label>2. Father's Name</label>
+                            <input type="name" formControlName="father" placeholder="Something">
+                            <h5 style="color: red; margin: 0;" *ngIf="father && father.invalid && father.touched">This
+                                field
+                                must required</h5>
+                            <label>3. Mother's Name</label>
+                            <input type="name" formControlName="mother" placeholder="Something">
+                            <h5 style="color: red; margin: 0;" *ngIf="mother && mother.invalid && mother.touched">This
+                                field
+                                must required</h5>
+                        </div>
+                        <div class="passport">
+                            <img [src]="imageFile === 'assets/undefined'||imageFile === 'assets/'? nonImage:imageFile">
+                        </div>
+                    </div>
+                    <div class="dob-gender">
+                        <div class="dob">
+                            <label>4. Date of Birth</label>
+                            <input type="date" formControlName="dob">
+                            <h5 style="color: red; margin: 0;" *ngIf="dob && dob.invalid && dob.touched">This field must
+                                required</h5>
+                        </div>
+                        <div class="gender">
+                            <label>5. Gender</label>
+                            <div class="geders">
+                                <input type="radio" formControlName="gender" value="male" checked><span>Male</span>
+                                <input type="radio" formControlName="gender" value="female" checked><span>Female</span>
+                                <input type="radio" formControlName="gender" value="transgender"
+                                    checked><span>Trangender</span>
+                                <h5 style="color: red; margin: 0;" *ngIf="gender && gender.invalid && gender.touched">
+                                    This field must required</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <label>6. Category</label>
+                    <div class="category">
+                        <input type="radio" formControlName="category" value="ews" checked><span>EWS</span>
+                        <input type="radio" formControlName="category" value="obc" checked><span>OBC</span>
+                        <input type="radio" formControlName="category" value="sc" checked><span>SC</span>
+                        <input type="radio" formControlName="category" value="st" checked><span>ST</span>
+                        <input type="radio" formControlName="category" value="general" checked><span>General</span>
+                        <h5 style="color: red; margin: 0;" *ngIf="category && category.invalid && category.touched">This
+                            field must required</h5>
+                    </div>
+                </div>
+                <h3 style="margin-top: 1rem;">Metriculation (10th Class Examination) Details</h3>
+                <div class="personal-details">
+                    <label>7. Education Board</label>
+                    <input type="name" formControlName="educationboard" placeholder="Something">
+                    <h5 style="color: red; margin: 0;"
+                        *ngIf="educationboard && educationboard.invalid && educationboard.touched">This field must
+                        required</h5>
+                    <label>8 Roll Number</label>
+                    <input type="name" formControlName="rollnumber" placeholder="Something">
+                    <h5 style="color: red; margin: 0;" *ngIf="rollnumber && rollnumber.invalid && rollnumber.touched">
+                        This field must required</h5>
+                    <label>9. Examination Name</label>
+                    <input type="name" formControlName="examname" placeholder="Something">
+                    <h5 style="color: red; margin: 0;" *ngIf="examname && examname.invalid && examname.touched">This
+                        field must required</h5>
+                    <div class="dob-gender">
+                        <div class="dob">
+                            <label>10. Examination Year</label>
+                            <select formControlName="examyear" class="year" (click)="yearIncreaser()">
+                                <option selected>Select</option>
+                                <option selected={{examyear1}}>{{examyear1}}</option>
+                                <option *ngFor="let year of yearArray">{{year}}</option>
+                            </select>
+                            <h5 style="color: red; margin: 0;" *ngIf="examyear && examyear.invalid && examyear.touched">
+                                This field must required</h5>
+                        </div>
+                        <div class="gender">
+                            <label>11. Examination Roll Number</label>
+                            <input type="text" formControlName="examrollno">
+                            <h5 style="color: red; margin: 0;"
+                                *ngIf="examrollno && examrollno.invalid && examrollno.touched">This field must required
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="dob-gender">
+                        <div class="dob">
+                            <label>12. Debbared From</label>
+                            <input type="date" formControlName="debbardfrom">
+                            <h5 style="color: red; margin: 0;"
+                                *ngIf="debbardfrom && debbardfrom.invalid && debbardfrom.touched">This field must
+                                required</h5>
+                        </div>
+                        <div class="gender">
+                            <label>13. Debarred Upto</label>
+                            <input type="date" formControlName="debbardupto">
+                            <h5 style="color: red; margin: 0;"
+                                *ngIf="debbardupto && debbardupto.invalid && debbardupto.touched">This field must
+                                required</h5>
+                        </div>
+                    </div>
+                    <label>14. Upload Photo of Debarred Candidate</label>
+                    <div class="file-upload">
+                        <div class="file-input">
+                            <input formControlName="imagefile" class="file-upload-input" type="file" name="avatar"
+                                (change)="fileUpload($event)">
+                            <h4>Drag the file here</h4>
+                            <h4>{{debbardCandidateObj?.filename}}</h4>
+                        </div>
+                    </div>
+                    <h5 style="color: red; margin: 0;"
+                        *ngIf="imagefile && imagefile.invalid && imagefile.touched|| debbardCandidateObj?.filename === ''">This field must
+                        required</h5>
+                </div>
+                <div class="btn">
+                    <button [disabled]="debbardCandidate.invalid">{{debbardCandidateObj?.name===""? 'Save': "Update"
+                        }}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

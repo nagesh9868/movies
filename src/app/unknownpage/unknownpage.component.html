@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="heading">
+        <h1>The requested Page is not available!!!</h1>
+        <h5 *ngIf="!isLoggedIn" routerLink="/user/login">Click here to Login Page</h5>
+        <h5 *ngIf="isLoggedIn" routerLink="/user/login">Click here to Home Page</h5>
+    </div>
+</div>
